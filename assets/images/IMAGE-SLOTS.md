@@ -8,6 +8,6 @@ Upload the following images using these exact names:
 - services/service-sailing-holidays.webp
 - about/about-bart-nieborg.webp
 - general/cta-plan-your-voyage.webp
-- lustrum/lustrum-sailing-group.webp
+- student-groups/student-group-sailing.webp
 
 The website already references these paths. Images will appear automatically after upload.
