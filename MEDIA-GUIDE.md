@@ -90,10 +90,10 @@ assets/images/about/about-bart-nieborg.webp
 - 1200 × 1500 px
 - Target under 350 KB
 
-### Lustrum Sailing
+### Student Group Sailing
 
 ```text
-assets/images/lustrum/lustrum-sailing-group.webp
+assets/images/student-groups/student-group-sailing.webp
 ```
 
 - Young adult group on or around a yacht

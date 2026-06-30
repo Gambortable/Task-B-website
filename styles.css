@@ -815,7 +815,7 @@ p {
   min-height: 560px;
   background:
     linear-gradient(140deg, rgba(0, 25, 40, .22), rgba(0, 40, 61, .7)),
-    url("assets/images/lustrum/lustrum-sailing-group.webp") center / cover no-repeat,
+    url("assets/images/student-groups/student-group-sailing.webp") center / cover no-repeat,
     linear-gradient(145deg, #3f9bbd, #00283d);
 }
 
@@ -1165,7 +1165,7 @@ p {
   color: var(--white);
   background:
     linear-gradient(100deg, rgba(0, 22, 34, .94), rgba(0, 54, 79, .65)),
-    url("assets/images/lustrum/lustrum-sailing-group.webp") center / cover no-repeat,
+    url("assets/images/student-groups/student-group-sailing.webp") center / cover no-repeat,
     linear-gradient(135deg, #00283d, #287fa3);
 }
 

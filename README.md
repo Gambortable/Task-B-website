@@ -17,7 +17,7 @@ task-b.com
 - `index.html` — main website
 - `styles.css` — full visual design
 - `script.js` — mobile menu and email enquiry form
-- `lustrumreizen/index.html` — Dutch lustrum landing page
+- `student-group-sailing/index.html` — English student-group landing page
 - `training-tool/index.html` — lightweight prototype password page
 - `training-tool/app/` — replace the placeholder with the existing instructional tool
 
@@ -121,3 +121,17 @@ The public offer is limited to:
 3. Tailor-made sailing holidays for private groups, teams and associations
 
 The Dutch lustrum page remains a dedicated group-holiday landing page.
+
+
+## Important: folder pages
+
+The following menu links are separate pages, not homepage scroll sections:
+
+```text
+student-group-sailing/index.html
+training-tool/index.html
+```
+
+Upload the **complete extracted package**, including both folders. Uploading only the files visible in the root will cause 404 errors.
+
+The old address `/lustrumreizen/` is retained as a redirect to `/student-group-sailing/`.
