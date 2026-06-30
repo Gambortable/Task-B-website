@@ -1,27 +1,123 @@
-# Task-B professional sailing-services website
+# Task-B Sailing Website v3
 
-Static, responsive website for standard shared hosting. No framework or build step is required.
+A static GitHub Pages website for **task-b.com**, focused on skipper services, sailing instruction and tailor-made group holidays.
 
 ## Upload
-Upload the complete contents of this folder to the web root for `task-b.com`. Keep the folder names and relative paths unchanged.
 
-## Main structure
-- `index.html` — homepage
-- `about.html`
-- `qualifications.html`
-- `contact.html`
-- `services/` — four service pages
-- `css/styles.css` — complete visual system
-- `js/site.js` — mobile navigation, image fallback and enquiry email preparation
-- `assets/images/` — your local photography and temporary placeholders
-- `assets/fonts/` — optional self-hosted fonts
-- `assets/icons/` — favicon
+Upload the contents of this folder to the **root** of the GitHub repository that currently publishes Task-B.com.
+
+Keep the included `CNAME` file. It preserves the custom domain:
+
+```text
+task-b.com
+```
+
+## Main files
+
+- `index.html` — main website
+- `styles.css` — full visual design
+- `script.js` — mobile menu and email enquiry form
+- `lustrumreizen/index.html` — Dutch lustrum landing page
+- `training-tool/index.html` — lightweight prototype password page
+- `training-tool/app/` — replace the placeholder with the existing instructional tool
+
+## Training-tool password
+
+The temporary default password is:
+
+```text
+taskb-demo
+```
+
+This is only a visual gate. It is **not secure authentication**. To change it:
+
+1. Choose a new password.
+2. Generate its SHA-256 hash.
+3. Replace `PASSWORD_HASH` in `training-tool/access.js`.
 
 ## Images
-Read `assets/images/README.md`. Add the listed WebP files from your own collection. Until then, the website uses neutral Task-B placeholders. No external photography is loaded.
+
+The design works without images. Missing image files fall back to blue gradients.
+
+Add these exact filenames later:
+
+```text
+assets/images/hero/task-b-hero-sailing.webp
+assets/images/services/service-professional-skipper.webp
+assets/images/services/service-sailing-instruction.webp
+assets/images/services/service-sailing-holidays.webp
+assets/images/about/about-bart-nieborg.webp
+assets/images/general/cta-plan-your-voyage.webp
+assets/images/lustrum/lustrum-sailing-group.webp
+```
+
+Recommended sizes:
+
+- Hero: 2000 × 1125 px
+- Service cards: 1200 × 900 px
+- About portrait: 1200 × 1500 px
+- CTA: 1800 × 900 px
+- Lustrum hero: 1800 × 1200 px
+
+Use WebP and keep each file reasonably compressed.
 
 ## Contact form
-The website is fully static. Submitting the form opens the visitor's email application with a prepared message to `bart@task-b.com`. This avoids collecting data or relying on a third-party form provider. A server-side form endpoint can be added later.
 
-## Font confirmation
-The earlier exact font names still need to be confirmed. Change only `--font-display` and `--font-body` near the top of `css/styles.css`, or add local `@font-face` rules.
+The form uses `mailto:` and opens the visitor's email application. It sends to:
+
+```text
+bart@task-b.com
+```
+
+No website backend or data storage is used.
+
+## Existing training tool
+
+Copy the current tool into:
+
+```text
+training-tool/app/
+```
+
+If its asset paths were written for the repository root, they may need to be adjusted. Test the tool at:
+
+```text
+https://task-b.com/training-tool/app/
+```
+
+
+## Homepage background video
+
+The homepage supports a muted, looping sailing background video.
+
+Upload:
+
+```text
+assets/video/task-b-homepage-hero.webm
+assets/video/task-b-homepage-hero.mp4
+```
+
+The design falls back to the hero image or sailing gradient when the video is unavailable. See `MEDIA-GUIDE.md` for all dimensions and selection rules.
+
+## Prototype access
+
+The training tool uses Option A: a lightweight JavaScript password gate.
+
+Default password:
+
+```text
+taskb-demo
+```
+
+See `training-tool/README.md` for limitations and instructions.
+
+
+## v3 positioning
+
+The public offer is limited to:
+
+1. Professional skipper hire
+2. Practical sailing instruction
+3. Tailor-made sailing holidays for private groups, teams and associations
+
+The Dutch lustrum page remains a dedicated group-holiday landing page.
