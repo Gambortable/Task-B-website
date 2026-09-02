@@ -1,0 +1,10 @@
+const header=document.querySelector('.site-header');
+const btn=document.querySelector('.menu-btn');
+const menu=document.querySelector('.mobile-menu');
+window.addEventListener('scroll',()=>header?.classList.toggle('scrolled',scrollY>40));
+btn?.addEventListener('click',()=>{menu.classList.toggle('open');btn.setAttribute('aria-expanded',menu.classList.contains('open'));btn.textContent=menu.classList.contains('open')?'Close':'Menu';});
+menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.textContent='Menu';btn.setAttribute('aria-expanded','false')}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('video[data-fallback]').forEach(v=>{v.addEventListener('error',()=>v.style.display='none',true)});
+const form=document.querySelector('[data-mailto-form]');
+form?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const subject=`Task-B enquiry — ${d.get('service')||'Sailing adventure'}`;const lines=[`Name: ${d.get('name')}`,`Email: ${d.get('email')}`,`Phone: ${d.get('phone')||'-'}`,`Service: ${d.get('service')}`,`Dates: ${d.get('dates')||'-'}`,`Group size: ${d.get('group')||'-'}`,`Location: ${d.get('location')||'-'}`,'',d.get('message')||''];location.href=`mailto:bart@task-b.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;});
