@@ -201,6 +201,11 @@ function bind() {
     els.mobileMenu.hidden = !els.mobileMenu.hidden;
   });
 
+  document.querySelector("#logoutButton")?.addEventListener("click", () => {
+    sessionStorage.removeItem("taskb-training-auth");
+    window.location.assign("../");
+  });
+
   els.feedbacks.forEach(button => {
     button.addEventListener("click", () => {
       showToast("Feedback form comes later. For this sprint, send a screenshot and short note.");
