@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /training-tool/
+Sitemap: https://task-b.com/sitemap.xml
